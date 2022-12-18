@@ -83,7 +83,7 @@ body {
     background-color: #e0e5ea;
     opacity: 1;
 }
-
+/* этим css свойством снимаем все события с элемента img и сразу попадаем в кнопку */
 .btn-action img {
 pointer-events: none;
 }
