@@ -1,0 +1,19 @@
+:root {
+  --dark-color: #2C2C2C;
+  --light-color: #F5F5F5;
+  --hover-color: #ccac64;
+}
+
+[data-theme="dark"] {
+  --background-color: var(--dark-color);
+  --text-color: var(--light-color);
+  --icon-color: var(--light-color);
+}
+
+[data-theme="light"] {
+  --background-color: var(--light-color);
+  --text-color: var(--dark-color);
+  --icon-color: var(--dark-color);
+}
+  
+
