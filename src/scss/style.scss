@@ -17,7 +17,7 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   transition: all 0.3s ease;
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -63,8 +63,37 @@ h2 {
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 4px;
-  margin: 0;
-  padding-bottom: 30px;
+  margin: 0 0 30px;
+}
+
+#typewriter {
+  overflow: hidden;
+  border-right: 2px solid var(--hover-color);
+  white-space: nowrap;
+  animation: typing 4s steps(18, end), blink 0.5s steps(18, end) 4s infinite;
+}
+
+#typewriter.finished {
+  overflow: visible;
+  border-right: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
+}
+
+@keyframes blink {
+  from {
+    border-right-color: var(--hover-color);
+  }
+  to {
+    border-right-color: transparent;
+  }
 }
 
 button.sun-moon {
@@ -88,6 +117,21 @@ button.sun-moon:hover svg circle,
 button.sun-moon:hover svg line {
   stroke: var(--hover-color); 
   transition: stroke 0.3s ease;
+}
+
+.main,
+.footer {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(150px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.main.finished,
+.footer.finished {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .grid-content {
