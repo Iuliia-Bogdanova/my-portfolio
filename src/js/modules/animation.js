@@ -1,4 +1,8 @@
+import { isCurrentPage } from "./utils";
+
 export function initAnimation() {
+  if (!isCurrentPage("home-page")) return;
+
   document.addEventListener("DOMContentLoaded", () => {
     const typewriter = document.getElementById("typewriter");
     const sections = document.querySelectorAll(".main, .footer");

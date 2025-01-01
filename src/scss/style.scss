@@ -96,6 +96,20 @@ h2 {
   }
 }
 
+.header__title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.back-arrow {
+  display: block;
+  width: 30px;
+  height: 100%;
+  margin: 0 0 24px;
+  transition: all 0.3s ease;
+}
+
 button.sun-moon {
   position: absolute;
   top: 50px;
