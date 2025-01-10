@@ -15,6 +15,15 @@
     />
     <!-- <meta property="og:image" content="..."> -->
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <script> // remove background flicker
+      (function () {
+        const userPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const savedTheme = localStorage.getItem("theme");
+        const initialTheme = savedTheme || (userPrefersDark ? "dark" : "light");
+        const initialBgColor = initialTheme === "dark" ? "#2C2C2C" : "#F5F5F5";
+        document.documentElement.style.backgroundColor = initialBgColor;
+      })();
+    </script>
   </head>
   <body id="home-page">
     <div class="container">

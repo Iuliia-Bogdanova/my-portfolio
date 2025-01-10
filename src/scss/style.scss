@@ -3,7 +3,15 @@
 
 html {
   box-sizing: border-box;
-  // overflow-x: hidden;
+  // background-color: var(--background-color);
+  // background-color: #909090;
+  // background-color: #5E5E5E;
+  // background-color: #2C2C2C;
+  overflow: hidden;
+}
+
+html, body {
+  background-color: transparent; /* Фон задается скриптом */
 }
 
 body {

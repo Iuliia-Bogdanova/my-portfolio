@@ -1,4 +1,4 @@
-export function initDarkLightTheme() {
+export function initThemeSwitcher() {
   document.addEventListener("DOMContentLoaded", () => {
     const themeToggleButton = document.querySelector(".sun-moon");
     const body = document.body;

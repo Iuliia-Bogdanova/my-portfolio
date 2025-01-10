@@ -1,8 +1,8 @@
 import "modern-normalize/modern-normalize.css";
 import "../scss/style.scss";
 
-import { initDarkLightTheme } from "./modules/theme";
+import { initThemeSwitcher } from "./modules/theme-switcher";
 import { initAnimation } from "./modules/animation";
 
-initDarkLightTheme();
+initThemeSwitcher();
 initAnimation();
