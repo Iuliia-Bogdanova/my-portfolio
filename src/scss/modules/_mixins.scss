@@ -1,0 +1,12 @@
+@mixin flex-center-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin background-image($image-url) {
+  background-image: url(#{$image-url});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
