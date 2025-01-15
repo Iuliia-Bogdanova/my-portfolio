@@ -3,15 +3,13 @@
 
 html {
   box-sizing: border-box;
-  // background-color: var(--background-color);
-  // background-color: #909090;
-  // background-color: #5E5E5E;
-  // background-color: #2C2C2C;
+  scroll-behavior: smooth;
   overflow: hidden;
 }
 
 html, body {
   background-color: transparent; /* Фон задается скриптом */
+  color: transparent;
 }
 
 body {
@@ -26,6 +24,7 @@ body {
   color: var(--text-color);
   transition: all 0.3s ease;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container {
