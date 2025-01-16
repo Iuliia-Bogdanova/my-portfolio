@@ -11,7 +11,7 @@ export function initArrowUp() {
   }
 
   const toggleButtonVisibility = () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 150) {
       initArrowUp.classList.add("visible");
     } else {
       initArrowUp.classList.remove("visible");

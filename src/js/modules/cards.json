@@ -5,9 +5,9 @@
       "default": "./src/assets/about-me_1.webp",
       "hover": "./src/assets/about-me.webp"
     },
-    "description": "My CV by template from RDCLR.SCHOOL",
+    "description": "My CV based on the template from RDCLR.SCHOOL",
     "name": "My CV",
-    "category": "html / css / figma react / adaptive"
+    "category": "html / css / figma / adaptive"
   },
   {
     "link": "https://new-year-gifts.netlify.app/",
@@ -27,7 +27,7 @@
     },
     "description": "Promotional website for a bead jewelry artisan",
     "name": "Raccoon's Shop",
-    "category": "html / css / js / jquery / slick-carousel /responsive"
+    "category": "html / css / js / jquery / responsive"
   },
   {
     "link": "https://iuliia-todo-react.netlify.app/",
@@ -35,19 +35,19 @@
       "default": "./src/assets/todo_1.webp",
       "hover": "./src/assets/todo.webp"
     },
-    "description": "Todo List application in ReactJS for task management, where you can add tasks, delete them, and change their status",
+    "description": "Todo List application in ReactJS for task management, allowing you to add tasks, delete them, & change their status",
     "name": "My ToDo List",
-    "category": "reactjs / jsx /css / localstorage / responsive"
+    "category": "reactjs / jsx / css / localstorage / responsive"
   },
   {
-    "link": "https://iuliia-bogdanova.github.io/Sasha_gallery/",
+    "link": "https://iuliia-bogdanova.github.io/Sasha_double-slider/",
     "image": {
       "default": "./src/assets/models_1.webp",
       "hover": "./src/assets/models.webp"
     },
-    "description": "Main slider of a portfolio website for a modeling agency",
+    "description": "Double slider on the homepage of a portfolio website for a modeling agency",
     "name": "WS Models",
-    "category": "html /css / swiperjs / adaptive"
+    "category": "html / css / swiperjs / adaptive"
   },
   {
     "link": "https://iuliia-bogdanova.github.io/Tormentum/",
@@ -57,7 +57,7 @@
     },
     "description": "Website showcasing the conceptual foundation of a fantastic universe, featuring locations and characters for use in the storyline of an online game",
     "name": "Tormentum",
-    "category": "html / scss / js /modules / swiperjs / gulp / desktop"
+    "category": "html / scss / js / modules / swiperjs / gulp / desktop"
   },
   {
     "link": "https://iuliia-bogdanova.github.io/Weather_OpenWeather/",
@@ -76,8 +76,8 @@
       "hover": "./src/assets/b12.webp"
     },
     "description": "Two-page website of a charity project",
-    "name": "B 12",
-    "category": "pug / scss / js / responsive"
+    "name": "B12",
+    "category": "pug / scss / js / figma / responsive"
   },
   {
     "link": "https://iuliia-bogdanova.github.io/My-Pomodoro-Timer/",
@@ -107,7 +107,7 @@
     },
     "description": "Reference website on plant-based nutrition",
     "name": "Vegan HoReCa",
-    "category": "nuxt / vue / scss / ts / adaptive"
+    "category": "nuxt / vue / scss / ts / figma / adaptive"
   },
   {
     "link": "https://iuliia-bogdanova.github.io/tic-tac-toe/",
@@ -125,7 +125,7 @@
       "default": "./src/assets/club_1.webp",
       "hover": "./src/assets/club.webp"
     },
-    "description": "Search page for finding posts by keyword on our Reading Club website",
+    "description": "Search page for finding posts by keywords on a Reading Club website",
     "name": "Book Club Posts",
     "category": "html / scss / js / json / api / adaptive"
   },
@@ -135,8 +135,8 @@
       "default": "./src/assets/email_1.webp",
       "hover": "./src/assets/email.webp"
     },
-    "description": "Promotional email with a discount code from an online store",
-    "name": "Email Newsletter",
-    "category": "html / css / table layout / email / adaptive"
+    "description": "Discount offer email with a promo code from an online store",
+    "name": "Exclusive Offer Email",
+    "category": "html / css / table layout / email / figma / adaptive"
   }
 ]
