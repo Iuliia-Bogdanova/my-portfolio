@@ -1,6 +1,4 @@
-@use "./modules/fonts";
 @use "./modules/vars";
-@use './modules/mixins' as *;
 
 html {
   box-sizing: border-box;
@@ -47,7 +45,7 @@ body::-webkit-scrollbar-thumb {
 .container {
   position: relative;
   width: 100%;
-  max-width: 1980px;
+  max-width: 1540px;
   min-height: 100%;
   padding: 50px;
 }
@@ -170,11 +168,8 @@ button.sun-moon {
 }
 
 .cards {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 40px;
+  columns: 300px;
+  column-gap: var(--gap);
   margin: 50px 0;
 }
 
@@ -182,9 +177,23 @@ button.sun-moon {
   position: relative;
   width: 300px;
   height: auto;
+  margin: 0 auto var(--gap); 
+  break-inside: avoid;
   border-radius: 20px;
   border: 2px solid var(--text-color);
-  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%);
+  // transform: translateY(50px);
+  transition: all 0.4s ease;
+  // transition: opacity 0.6s ease, transform 0.6s ease;
+
+  &.finished {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+    // transform: translateY(0);
+  }
 
   &:hover {
     border: 3px solid var(--hover-color);
@@ -224,6 +233,16 @@ button.sun-moon {
 
   &.center {
     text-align: center;
+    padding-top: 20px;
+    opacity: 0;
+    visibility: hidden;
+    // transition: opacity 0.6s ease, visibility 0.6s ease;
+    transition: all 0.4s ease;
+
+      &.finished {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 

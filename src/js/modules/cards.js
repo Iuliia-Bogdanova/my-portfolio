@@ -1,5 +1,6 @@
+import { addFinishedClass } from "./utils";
+
 export async function loadCardsData() {
-  
   try {
     // Загрузить JSON относительно текущего модуля (т к json не в public)
     const response = await fetch(new URL("./cards.json", import.meta.url));
@@ -42,7 +43,7 @@ export function createCardElement(cardData) {
   category.classList.add("topics");
   category.textContent = cardData.category;
 
-  // Собрать текстовую часть
+  // Собрать текст
   cardText.appendChild(description);
   cardText.appendChild(name);
   cardText.appendChild(category);
@@ -50,15 +51,6 @@ export function createCardElement(cardData) {
   // Собрать карточку
   cardItem.appendChild(cardImage);
   cardItem.appendChild(cardText);
-
-  // // Обработчик событий для смены background-image при ховере на всю карточку
-  // cardItem.addEventListener("mouseenter", () => {
-  //   cardImage.style.backgroundImage = `url("${cardData.image.hover}")`;
-  // });
-
-  // cardItem.addEventListener("mouseleave", () => {
-  //   cardImage.style.backgroundImage = `url("${cardData.image.default}")`;
-  // });
 
   // Определить вид устройства
   const isMobile = window.matchMedia("(max-width: 768px)").matches;
@@ -83,8 +75,8 @@ export function createCardElement(cardData) {
     cardImage.style.backgroundImage = `url("${cardData.image.hover}")`;
   });
 
+  // Убрать класс ховера
   cardItem.addEventListener("touchend", () => {
-    // Убрать класс ховера
     cardItem.classList.remove("touched");
 
     // Вернуть фон
@@ -97,8 +89,8 @@ export function createCardElement(cardData) {
   return linkElement;
 }
 
-export async function renderCards(containerSelector) {
   // Загрузить данные из JSON
+export async function renderCards(containerSelector) {
   const cardsData = await loadCardsData();
 
   // Получить контейнер для карточек
@@ -113,4 +105,8 @@ export async function renderCards(containerSelector) {
     const cardElement = createCardElement(cardData);
     container.appendChild(cardElement);
   });
+
+  // addFinishedClass для анимации карточек
+  addFinishedClass(".card-item", 100); 
+  addFinishedClass(".center", 0);
 }

@@ -10,6 +10,66 @@
     "category": "html / css / figma / adaptive"
   },
   {
+    "link": "https://iuliia-bogdanova.github.io/Sasha_double-slider/",
+    "image": {
+      "default": "./src/assets/models_1.webp",
+      "hover": "./src/assets/models.webp"
+    },
+    "description": "Double slider on the homepage of a portfolio website for a modeling agency",
+    "name": "WS Models",
+    "category": "html / css / swiperjs / adaptive"
+  },
+  {
+    "link": "https://b12.veganrussian.ru/",
+    "image": {
+      "default": "./src/assets/b12_1.webp",
+      "hover": "./src/assets/b12.webp"
+    },
+    "description": "Two-page website of a charity project",
+    "name": "B12",
+    "category": "pug / scss / js / figma / responsive"
+  },
+  {
+    "link": "https://cats-hostel.netlify.app/",
+    "image": {
+      "default": "./src/assets/cats_1.webp",
+      "hover": "./src/assets/cats.webp"
+    },
+    "description": "Landing page for a cat hostel",
+    "name": "Happy Cats",
+    "category": "reactjs / jsx / scss / slider / vite / adaptive"
+  },
+  {
+    "link": "https://iuliia-bogdanova.github.io/Tormentum/",
+    "image": {
+      "default": "./src/assets/tormentum_1.webp",
+      "hover": "./src/assets/tormentum.webp"
+    },
+    "description": "Website showcasing the conceptual foundation of a fantastic universe, featuring locations and characters for use in the storyline of an online game",
+    "name": "Tormentum",
+    "category": "html / scss / js / modules / swiperjs / gulp / desktop"
+  },
+  {
+    "link": "https://iuliia-todo-react.netlify.app/",
+    "image": {
+      "default": "./src/assets/todo_1.webp",
+      "hover": "./src/assets/todo.webp"
+    },
+    "description": "Todo List application in ReactJS for task management, allowing you to add tasks, delete them, & change their status",
+    "name": "My ToDo List",
+    "category": "reactjs / jsx / css / localstorage / responsive"
+  },
+  {
+    "link": "https://iuliia-bogdanova.github.io/Weather_OpenWeather/",
+    "image": {
+      "default": "./src/assets/weather_1.webp",
+      "hover": "./src/assets/weather.webp"
+    },
+    "description": "Weather forecast application using the API from OpenWeather",
+    "name": "Weather in Your City",
+    "category": "html / css / js / api / adaptive"
+  },
+  {
     "link": "https://new-year-gifts.netlify.app/",
     "image": {
       "default": "./src/assets/gifts_1.webp",
@@ -30,74 +90,14 @@
     "category": "html / css / js / jquery / responsive"
   },
   {
-    "link": "https://iuliia-todo-react.netlify.app/",
+    "link": "https://iuliia-bogdanova.github.io/Mailfit-test/",
     "image": {
-      "default": "./src/assets/todo_1.webp",
-      "hover": "./src/assets/todo.webp"
+      "default": "./src/assets/email_1.webp",
+      "hover": "./src/assets/email.webp"
     },
-    "description": "Todo List application in ReactJS for task management, allowing you to add tasks, delete them, & change their status",
-    "name": "My ToDo List",
-    "category": "reactjs / jsx / css / localstorage / responsive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/Sasha_double-slider/",
-    "image": {
-      "default": "./src/assets/models_1.webp",
-      "hover": "./src/assets/models.webp"
-    },
-    "description": "Double slider on the homepage of a portfolio website for a modeling agency",
-    "name": "WS Models",
-    "category": "html / css / swiperjs / adaptive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/Tormentum/",
-    "image": {
-      "default": "./src/assets/tormentum_1.webp",
-      "hover": "./src/assets/tormentum.webp"
-    },
-    "description": "Website showcasing the conceptual foundation of a fantastic universe, featuring locations and characters for use in the storyline of an online game",
-    "name": "Tormentum",
-    "category": "html / scss / js / modules / swiperjs / gulp / desktop"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/Weather_OpenWeather/",
-    "image": {
-      "default": "./src/assets/weather_1.webp",
-      "hover": "./src/assets/weather.webp"
-    },
-    "description": "Weather forecast application using the API from OpenWeather",
-    "name": "Weather in Your City",
-    "category": "html / css / js / api / adaptive"
-  },
-  {
-    "link": "https://b12.veganrussian.ru/",
-    "image": {
-      "default": "./src/assets/b12_1.webp",
-      "hover": "./src/assets/b12.webp"
-    },
-    "description": "Two-page website of a charity project",
-    "name": "B12",
-    "category": "pug / scss / js / figma / responsive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/My-Pomodoro-Timer/",
-    "image": {
-      "default": "./src/assets/timer_1.webp",
-      "hover": "./src/assets/timer.webp"
-    },
-    "description": "Pomodoro timer alternates between work and break periods, tracking completed rounds and displaying a message after each",
-    "name": "Pomodoro Timer",
-    "category": "html / css / js / localstorage / adaptive"
-  },
-  {
-    "link": "https://cats-hostel.netlify.app/",
-    "image": {
-      "default": "./src/assets/cats_1.webp",
-      "hover": "./src/assets/cats.webp"
-    },
-    "description": "Landing page for a cat hostel",
-    "name": "Happy Cats",
-    "category": "reactjs / jsx / scss / slider / vite / adaptive"
+    "description": "Discount offer email with a promo code from an online store",
+    "name": "Exclusive Offer Email",
+    "category": "html / css / table layout / email / figma / adaptive"
   },
   {
     "link": "https://www.veganhoreca.ru/",
@@ -110,14 +110,14 @@
     "category": "nuxt / vue / scss / ts / figma / adaptive"
   },
   {
-    "link": "https://iuliia-bogdanova.github.io/tic-tac-toe/",
+    "link": "https://iuliia-bogdanova.github.io/My-Pomodoro-Timer/",
     "image": {
-      "default": "./src/assets/tictac_1.webp",
-      "hover": "./src/assets/tictac.webp"
+      "default": "./src/assets/timer_1.webp",
+      "hover": "./src/assets/timer.webp"
     },
-    "description": "Tic-Tac-Toe game where players enter their names, and the game ends with a winner or a draw, with an option to play again",
-    "name": "Tic-Tac-Toe",
-    "category": "html / css / mjs / adaptive"
+    "description": "Pomodoro timer alternates between work and break periods, tracking completed rounds and displaying a message after each",
+    "name": "Pomodoro Timer",
+    "category": "html / css / js / localstorage / adaptive"
   },
   {
     "link": "https://iuliia-bogdanova.github.io/book-club-posts/",
@@ -130,13 +130,13 @@
     "category": "html / scss / js / json / api / adaptive"
   },
   {
-    "link": "https://iuliia-bogdanova.github.io/Mailfit-test/",
+    "link": "https://iuliia-bogdanova.github.io/tic-tac-toe/",
     "image": {
-      "default": "./src/assets/email_1.webp",
-      "hover": "./src/assets/email.webp"
+      "default": "./src/assets/tictac_1.webp",
+      "hover": "./src/assets/tictac.webp"
     },
-    "description": "Discount offer email with a promo code from an online store",
-    "name": "Exclusive Offer Email",
-    "category": "html / css / table layout / email / figma / adaptive"
+    "description": "Tic-Tac-Toe game where players enter their names, and the game ends with a winner or a draw, with an option to play again",
+    "name": "Tic-Tac-Toe",
+    "category": "html / css / mjs / adaptive"
   }
 ]
