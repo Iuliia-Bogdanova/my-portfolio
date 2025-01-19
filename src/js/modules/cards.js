@@ -13,6 +13,7 @@ export async function loadCardsData() {
 }
 
 export function createCardElement(cardData) {
+  
   // Создать обертку-ссылку
   const linkElement = document.createElement("a");
   linkElement.href = cardData.link;

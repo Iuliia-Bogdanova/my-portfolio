@@ -1,6 +1,6 @@
 import { isCurrentPage } from "./utils";
 
-export function initAnimation() {
+export function initTitleAnimation() {
   if (!isCurrentPage("home-page")) return;
 
   document.addEventListener("DOMContentLoaded", () => {

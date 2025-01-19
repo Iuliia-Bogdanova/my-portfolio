@@ -15,6 +15,15 @@ export function initThemeSwitcher() {
       body.setAttribute("data-theme", userPrefersDark ? "dark" : "light");
     }
 
+    // Задержать показ кнопки
+    themeToggleButton.classList.add("hidden");
+
+    // Показать кнопку после загрузки контента
+    window.addEventListener("load", () => {
+      themeToggleButton.classList.remove("hidden");
+      themeToggleButton.classList.add("visible");
+    });
+
     // Переключить тему
     themeToggleButton.addEventListener("click", () => {
       const currentTheme = body.getAttribute("data-theme");
@@ -24,4 +33,5 @@ export function initThemeSwitcher() {
     });
   });
 }
+
 

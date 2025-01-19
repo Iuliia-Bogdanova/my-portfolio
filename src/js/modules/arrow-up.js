@@ -3,26 +3,35 @@ import { isCurrentPage } from "./utils.js";
 export function initArrowUp() {
   if (!isCurrentPage("projects-page")) return;
 
-  const initArrowUp = document.querySelector(".arrow-up");
+  const arrowUp = document.querySelector(".arrow-up");
 
-  if (!initArrowUp) {
+  if (!arrowUp) {
     console.error("Arrow-up button not found in the DOM");
     return;
   }
 
+  // Скрыть кнопку
+  arrowUp.classList.add("hidden");
+
+  // Функция для переключения видимости кнопки
   const toggleButtonVisibility = () => {
     if (window.scrollY > 150) {
-      initArrowUp.classList.add("visible");
+      arrowUp.classList.add("visible");
+      arrowUp.classList.remove("hidden");
     } else {
-      initArrowUp.classList.remove("visible");
+      arrowUp.classList.remove("visible");
     }
   };
 
+  // Вызов функции сразу после загрузки
   toggleButtonVisibility();
+
+  // Добавление обработчиков на события
   window.addEventListener("scroll", toggleButtonVisibility);
   window.addEventListener("resize", toggleButtonVisibility);
 
-  initArrowUp.addEventListener("click", () => {
+  // Обработчик клика по кнопке
+  arrowUp.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",

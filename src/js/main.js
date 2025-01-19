@@ -2,17 +2,15 @@ import "modern-normalize/modern-normalize.css";
 import "../scss/style.scss";
 
 import { initThemeSwitcher } from "./modules/theme-switcher";
-import { initAnimation } from "./modules/animation";
+import { initTitleAnimation } from "./modules/title-animation";
 import { initArrowUp } from "./modules/arrow-up";
 import { isCurrentPage } from "./modules/utils";
 import { renderCards } from "./modules/cards";
 
 initThemeSwitcher();
-initAnimation();
+initTitleAnimation();
 initArrowUp();
 
-document.addEventListener("DOMContentLoaded", () => {
-  if (isCurrentPage("projects-page")) {
-    renderCards(".cards");
-  }
-});
+if (isCurrentPage("projects-page")) {
+  renderCards(".cards");
+}

@@ -8,7 +8,7 @@ export function addFinishedClass(selector, delay) {
   elements.forEach((el, index) => {
     setTimeout(() => {
       el.classList.add('finished');
-    }, index * delay); // Задержка для каждой следующей карточки или элемента
+    }, index * delay); // Задержка для каждой следующей карточки/элемента
   });
 }
 
