@@ -1,7 +1,9 @@
 Iuliia Bogdanova. Portfolio  
+
 Two-page web developer portfolio site: adaptive sites, Pixel Perfect, modern technologies.  
 - dark and light themes
 - dynamic rendering of project cards
+- masonry card layout
 - dynamic replacement of images in cards
 - animation effects
   
