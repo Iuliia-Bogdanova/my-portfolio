@@ -11,3 +11,11 @@ export function addFinishedClass(selector, delay) {
   });
 }
 
+export function toggleScrollForPage(pageId) {
+  if (isCurrentPage(pageId)) {
+    document.body.style.overflowY = "auto";
+  } else {
+    document.body.style.overflowY = "hidden";
+  }
+}
+  
