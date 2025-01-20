@@ -174,11 +174,21 @@ button.sun-moon {
 
 .grid-content {
   display: grid;
+  align-items: center;
   grid-template-columns: 100px auto;
   grid-template-rows: repeat(5, auto);
   column-gap: 6px;
   row-gap: 16px;
   padding-bottom: 30px;
+}
+
+.forward-arrow {
+  display: inline-block;
+  width: 30px; 
+  height: 100%; 
+  margin-left: 10px;
+  vertical-align: middle; 
+  rotate: 180deg
 }
 
 .cards {
