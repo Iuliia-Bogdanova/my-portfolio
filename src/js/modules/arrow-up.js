@@ -13,7 +13,7 @@ export function initArrowUp() {
   // Скрыть кнопку
   arrowUp.classList.add("hidden");
 
-  // Функция для переключения видимости кнопки
+  // Переключить видимость
   const toggleButtonVisibility = () => {
     if (window.scrollY > 150) {
       arrowUp.classList.add("visible");
@@ -23,14 +23,14 @@ export function initArrowUp() {
     }
   };
 
-  // Вызов функции сразу после загрузки
+  // Вызвать функцию сразу после загрузки
   toggleButtonVisibility();
 
-  // Добавление обработчиков на события
+  // Добавить обработчики
   window.addEventListener("scroll", toggleButtonVisibility);
   window.addEventListener("resize", toggleButtonVisibility);
 
-  // Обработчик клика по кнопке
+  // Обработать клик
   arrowUp.addEventListener("click", () => {
     window.scrollTo({
       top: 0,

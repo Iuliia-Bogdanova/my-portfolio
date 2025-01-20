@@ -108,6 +108,6 @@ export async function renderCards(containerSelector) {
   });
 
   // addFinishedClass для анимации карточек
-  addFinishedClass(".card-item", 100); 
+  addFinishedClass(".card-item", 100);
   addFinishedClass(".center", 0);
 }
