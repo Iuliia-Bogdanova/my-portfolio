@@ -69,6 +69,7 @@ button {
 
 p {
   margin: 0;
+  line-height: 1.4;
 }
 
 h1,
@@ -174,7 +175,6 @@ button.sun-moon {
 
 .grid-content {
   display: grid;
-  align-items: center;
   grid-template-columns: 100px auto;
   grid-template-rows: repeat(5, auto);
   column-gap: 6px;
@@ -185,10 +185,10 @@ button.sun-moon {
 .forward-arrow {
   display: inline-block;
   width: 30px; 
-  height: 100%; 
+  height: 28px; 
   margin-left: 10px;
-  vertical-align: middle; 
-  rotate: 180deg
+  vertical-align: top;
+  rotate: 180deg;
 }
 
 .cards {
@@ -292,7 +292,6 @@ button.arrow-up {
   &.hidden {
     display: none;
   }
-
 
   svg {
     stroke: var(--icon-color);

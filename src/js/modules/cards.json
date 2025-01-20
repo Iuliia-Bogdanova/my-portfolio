@@ -2,8 +2,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/About-Me/",
     "image": {
-      "default": "./src/assets/about-me_1.webp",
-      "hover": "./src/assets/about-me.webp"
+      "default": "./assets/about-me_1.webp",
+      "hover": "./assets/about-me.webp"
     },
     "description": "My CV based on the template from RDCLR.SCHOOL",
     "name": "My CV",
@@ -12,8 +12,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/Sasha_double-slider/",
     "image": {
-      "default": "./src/assets/models_1.webp",
-      "hover": "./src/assets/models.webp"
+      "default": "./assets/models_1.webp",
+      "hover": "./assets/models.webp"
     },
     "description": "Double slider on the homepage of a portfolio website for a modeling agency",
     "name": "WS Models",
@@ -22,8 +22,8 @@
   {
     "link": "https://b12.veganrussian.ru/",
     "image": {
-      "default": "./src/assets/b12_1.webp",
-      "hover": "./src/assets/b12.webp"
+      "default": "./assets/b12_1.webp",
+      "hover": "./assets/b12.webp"
     },
     "description": "Two-page website of a charity project",
     "name": "B12",
@@ -32,8 +32,8 @@
   {
     "link": "https://cats-hostel.netlify.app/",
     "image": {
-      "default": "./src/assets/cats_1.webp",
-      "hover": "./src/assets/cats.webp"
+      "default": "./assets/cats_1.webp",
+      "hover": "./assets/cats.webp"
     },
     "description": "Landing page for a cat hostel",
     "name": "Happy Cats",
@@ -42,8 +42,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/Tormentum/",
     "image": {
-      "default": "./src/assets/tormentum_1.webp",
-      "hover": "./src/assets/tormentum.webp"
+      "default": "./assets/tormentum_1.webp",
+      "hover": "./assets/tormentum.webp"
     },
     "description": "Website showcasing the conceptual foundation of a fantastic universe, featuring locations and characters for use in the storyline of an online game",
     "name": "Tormentum",
@@ -52,8 +52,8 @@
   {
     "link": "https://iuliia-todo-react.netlify.app/",
     "image": {
-      "default": "./src/assets/todo_1.webp",
-      "hover": "./src/assets/todo.webp"
+      "default": "./assets/todo_1.webp",
+      "hover": "./assets/todo.webp"
     },
     "description": "Todo List application in ReactJS for task management, allowing you to add tasks, delete them, & change their status",
     "name": "My ToDo List",
@@ -62,8 +62,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/Weather_OpenWeather/",
     "image": {
-      "default": "./src/assets/weather_1.webp",
-      "hover": "./src/assets/weather.webp"
+      "default": "./assets/weather_1.webp",
+      "hover": "./assets/weather.webp"
     },
     "description": "Weather forecast application using the API from OpenWeather",
     "name": "Weather in Your City",
@@ -72,8 +72,8 @@
   {
     "link": "https://new-year-gifts.netlify.app/",
     "image": {
-      "default": "./src/assets/gifts_1.webp",
-      "hover": "./src/assets/gifts.webp"
+      "default": "./assets/gifts_1.webp",
+      "hover": "./assets/gifts.webp"
     },
     "description": "Two-page online store website",
     "name": "New Year Gifts",
@@ -82,8 +82,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/raccoons_shop/",
     "image": {
-      "default": "./src/assets/raccoons_1.webp",
-      "hover": "./src/assets/raccoons.webp"
+      "default": "./assets/raccoons_1.webp",
+      "hover": "./assets/raccoons.webp"
     },
     "description": "Promotional website for a bead jewelry artisan",
     "name": "Raccoon's Shop",
@@ -92,8 +92,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/Mailfit-test/",
     "image": {
-      "default": "./src/assets/email_1.webp",
-      "hover": "./src/assets/email.webp"
+      "default": "./assets/email_1.webp",
+      "hover": "./assets/email.webp"
     },
     "description": "Discount offer email with a promo code from an online store",
     "name": "Exclusive Offer Email",
@@ -102,8 +102,8 @@
   {
     "link": "https://www.veganhoreca.ru/",
     "image": {
-      "default": "./src/assets/horeca_1.webp",
-      "hover": "./src/assets/horeca.webp"
+      "default": "./assets/horeca_1.webp",
+      "hover": "./assets/horeca.webp"
     },
     "description": "Reference website on plant-based nutrition",
     "name": "Vegan HoReCa",
@@ -112,8 +112,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/My-Pomodoro-Timer/",
     "image": {
-      "default": "./src/assets/timer_1.webp",
-      "hover": "./src/assets/timer.webp"
+      "default": "./assets/timer_1.webp",
+      "hover": "./assets/timer.webp"
     },
     "description": "Pomodoro timer alternates between work and break periods, tracking completed rounds and displaying a message after each",
     "name": "Pomodoro Timer",
@@ -122,8 +122,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/book-club-posts/",
     "image": {
-      "default": "./src/assets/club_1.webp",
-      "hover": "./src/assets/club.webp"
+      "default": "./assets/club_1.webp",
+      "hover": "./assets/club.webp"
     },
     "description": "Search page for finding posts by keywords on a Reading Club website",
     "name": "Book Club Posts",
@@ -132,8 +132,8 @@
   {
     "link": "https://iuliia-bogdanova.github.io/tic-tac-toe/",
     "image": {
-      "default": "./src/assets/tictac_1.webp",
-      "hover": "./src/assets/tictac.webp"
+      "default": "./assets/tictac_1.webp",
+      "hover": "./assets/tictac.webp"
     },
     "description": "Tic-Tac-Toe game where players enter their names, and the game ends with a winner or a draw, with an option to play again",
     "name": "Tic-Tac-Toe",
