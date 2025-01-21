@@ -1,3 +1,21 @@
+@media (hover: hover) {
+  button {
+    cursor: pointer;
+
+    &.sun-moon:hover svg path,
+    &.sun-moon:hover svg circle,
+    &.sun-moon:hover svg line {
+      stroke: var(--hover-color);
+      transition: stroke 0.3s ease;
+    }
+
+    &.arrow-up:hover svg {
+      fill: var(--hover-color);
+      transition: fill 0.3s ease;
+    }
+  }
+}
+
 @media (max-width: 700px) {
   .container {
     padding: 30px;

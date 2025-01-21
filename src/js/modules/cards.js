@@ -13,7 +13,6 @@ export async function loadCardsData() {
 }
 
 export function createCardElement(cardData) {
-  
   // Создать обертку-ссылку
   const linkElement = document.createElement("a");
   linkElement.href = cardData.link;
@@ -90,7 +89,7 @@ export function createCardElement(cardData) {
   return linkElement;
 }
 
-  // Загрузить данные из JSON
+// Загрузить данные из JSON
 export async function renderCards(containerSelector) {
   const cardsData = await loadCardsData();
 

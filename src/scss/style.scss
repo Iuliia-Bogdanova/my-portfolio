@@ -5,8 +5,9 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
-  background-color: transparent; /* Фон задается скриптом */
+html,
+body {
+  background-color: transparent; /* задается скриптом */
   color: transparent;
 }
 
@@ -24,18 +25,18 @@ body {
 }
 
 body::-webkit-scrollbar {
-    background: inherit;
-    width: 10px;
+  background: inherit;
+  width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 8px;
-    border: 1px solid var(--text-color);
-    
-    &:hover {
-      border: 1px solid var(--hover-color);
-      background-color: var(--hover-color);
-    }
+  border-radius: 8px;
+  border: 1px solid var(--text-color);
+
+  &:hover {
+    border: 1px solid var(--hover-color);
+    background-color: var(--hover-color);
+  }
 }
 
 .container {
@@ -44,6 +45,7 @@ body::-webkit-scrollbar-thumb {
   max-width: 1540px;
   min-height: 100%;
   padding: 50px;
+  margin: 0 auto;
 }
 
 a {
@@ -60,7 +62,6 @@ a {
 button {
   border: none;
   background-color: inherit;
-  cursor: pointer;
 }
 
 p {
@@ -140,16 +141,9 @@ button.sun-moon {
   &.hidden {
     display: none;
   }
-  
+
   & svg {
     stroke: var(--icon-color);
-    transition: stroke 0.3s ease;
-  }
-
-  &:hover svg path,
-  &:hover svg circle,
-  &:hover svg line {
-    stroke: var(--hover-color);
     transition: stroke 0.3s ease;
   }
 }
@@ -180,8 +174,8 @@ button.sun-moon {
 
 .forward-arrow {
   display: inline-block;
-  width: 30px; 
-  height: 28px; 
+  width: 30px;
+  height: 28px;
   margin-left: 10px;
   vertical-align: top;
   rotate: 180deg;
@@ -197,7 +191,7 @@ button.sun-moon {
   position: relative;
   width: 300px;
   height: auto;
-  margin: 0 auto var(--gap); 
+  margin: 0 auto var(--gap);
   break-inside: avoid;
   border-radius: 20px;
   border: 2px solid var(--text-color);
@@ -255,7 +249,7 @@ button.sun-moon {
     visibility: hidden;
     transition: all 0.4s ease;
 
-      &.finished {
+    &.finished {
       opacity: 1;
       visibility: visible;
     }
@@ -264,7 +258,7 @@ button.sun-moon {
 
 span.copy {
   font-size: 24px;
-  vertical-align: top;
+  vertical-align: -9px;
 }
 
 button.arrow-up {
@@ -291,12 +285,7 @@ button.arrow-up {
 
   svg {
     stroke: var(--icon-color);
-
-    &:hover {
-      fill: var(--hover-color);
-      transition: all 0.3s ease;
-    }
   }
 }
 
-@import './modules/media';
+@import "./modules/media";

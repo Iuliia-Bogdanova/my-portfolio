@@ -6,7 +6,7 @@ export function addFinishedClass(selector, delay) {
   const elements = document.querySelectorAll(selector);
   elements.forEach((el, index) => {
     setTimeout(() => {
-      el.classList.add('finished');
+      el.classList.add("finished");
     }, index * delay); // Задержка для каждой следующей карточки/элемента
   });
 }
@@ -18,4 +18,3 @@ export function toggleScrollForPage(pageId) {
     document.body.style.overflowY = "hidden";
   }
 }
-  
