@@ -1,4 +1,10 @@
 @media (hover: hover) {
+  a  {
+    cursor: pointer;
+    color: var(--hover-color);
+    
+  }
+
   button {
     cursor: pointer;
 

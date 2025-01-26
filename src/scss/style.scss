@@ -51,12 +51,13 @@ body::-webkit-scrollbar-thumb {
 a {
   text-decoration: none;
   color: inherit;
+  color: var(--text-color);
   transition: all 0.3s ease;
 
-  &:hover {
-    color: var(--hover-color);
-    cursor: pointer;
-  }
+  // &:hover {
+  //   color: var(--hover-color);
+  //   cursor: pointer;
+  // }
 }
 
 button {
@@ -67,6 +68,8 @@ button {
 p {
   margin: 0;
   line-height: 1.4;
+  color: inherit;
+  // color: var(--text-color);
 }
 
 h1,
@@ -81,7 +84,7 @@ h2 {
   overflow: hidden;
   border-right: 2px solid var(--hover-color);
   white-space: nowrap;
-  animation: typing 4s steps(18, end), blink 0.5s steps(18, end) 4s infinite;
+  animation: typing 2s steps(18, end), blink 0.5s steps(18, end) 4s infinite;
 }
 
 #typewriter.finished {
@@ -118,7 +121,15 @@ h2 {
   width: 30px;
   height: 100%;
   margin: 0 0 24px;
-  transition: all 0.3s ease;
+
+  & svg {
+    fill: var(--icon-color);
+  }
+
+  &:hover svg {
+    fill: var(--hover-color);
+    transition: fill 0.3s ease;
+  }
 }
 
 button.sun-moon {
@@ -153,7 +164,7 @@ button.sun-moon {
   opacity: 0;
   visibility: hidden;
   transform: translateY(150px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .main.finished,
