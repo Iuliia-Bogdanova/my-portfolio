@@ -11,6 +11,10 @@ export function addFinishedClass(selector, delay) {
   });
 }
 
+export function isMobileDevice() {
+  return window.matchMedia("(max-width: 768px)").matches;
+}
+
 export function toggleScrollForPage(pageId) {
   if (isCurrentPage(pageId)) {
     document.body.style.overflowY = "auto";

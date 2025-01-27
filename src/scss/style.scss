@@ -50,14 +50,8 @@ body::-webkit-scrollbar-thumb {
 
 a {
   text-decoration: none;
-  color: inherit;
   color: var(--text-color);
   transition: all 0.3s ease;
-
-  // &:hover {
-  //   color: var(--hover-color);
-  //   cursor: pointer;
-  // }
 }
 
 button {
@@ -68,8 +62,6 @@ button {
 p {
   margin: 0;
   line-height: 1.4;
-  color: inherit;
-  // color: var(--text-color);
 }
 
 h1,
@@ -226,12 +218,13 @@ button.sun-moon {
     }
   }
 
-  &.touched {
+  &.active {
     border: 3px solid var(--hover-color);
-    transform: scaleY(1.1);
+    transition: all 0.4s ease;
 
     h3 {
       color: var(--hover-color);
+      transition: all 0.4s ease;
     }
   }
 }

@@ -1,8 +1,18 @@
-import { addFinishedClass } from "./utils";
+/**
+ * NOTE: This script relies on the viewport size determined at page load.
+ * For development and testing:
+ * - Clear browser cache or enable "Disable cache" in DevTools when switching viewports.
+ * - Ensure the page is reloaded after changing viewport size for proper behavior.
+ */
 
+import { addFinishedClass } from "./utils";
+import { isMobileDevice } from "./utils";
+
+const isMobile = isMobileDevice();
+
+// Загрузить JSON относительно текущего модуля (т к json не в public)
 export async function loadCardsData() {
   try {
-    // Загрузить JSON относительно текущего модуля (т к json не в public)
     const response = await fetch(new URL("./cards.json", import.meta.url));
     if (!response.ok) throw new Error("Failed to load cards data");
     return await response.json();
@@ -23,12 +33,12 @@ export function createCardElement(cardData) {
   const cardItem = document.createElement("div");
   cardItem.classList.add("card-item");
 
-  // Создать background-image
+  // Создать фон
   const cardImage = document.createElement("div");
   cardImage.classList.add("card__img");
   cardImage.style.backgroundImage = `url("${cardData.image.default}")`;
 
-  // Создать текст карточки
+  // Создать текст
   const cardText = document.createElement("div");
   cardText.classList.add("card__text");
 
@@ -52,9 +62,6 @@ export function createCardElement(cardData) {
   cardItem.appendChild(cardImage);
   cardItem.appendChild(cardText);
 
-  // Определить вид устройства
-  const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
   // Обработчики ховера для десктопа
   if (!isMobile) {
     cardItem.addEventListener("mouseenter", () => {
@@ -66,22 +73,9 @@ export function createCardElement(cardData) {
     });
   }
 
-  // Обработчики тача для мобильных
-  cardItem.addEventListener("touchstart", () => {
-    // Добавить класс для активации стилей ховера
-    cardItem.classList.add("touched");
-
-    // Динамически изменить фон
-    cardImage.style.backgroundImage = `url("${cardData.image.hover}")`;
-  });
-
-  // Убрать класс ховера
-  cardItem.addEventListener("touchend", () => {
-    cardItem.classList.remove("touched");
-
-    // Вернуть фон
-    cardImage.style.backgroundImage = `url("${cardData.image.default}")`;
-  });
+  // Добавить data-атрибуты для Intersection Observer
+  cardItem.dataset.hoverImage = cardData.image.hover;
+  cardItem.dataset.defaultImage = cardData.image.default;
 
   // Вставить карточку в ссылку
   linkElement.appendChild(cardItem);
@@ -89,7 +83,7 @@ export function createCardElement(cardData) {
   return linkElement;
 }
 
-// Загрузить данные из JSON
+// Рендер карточек
 export async function renderCards(containerSelector) {
   const cardsData = await loadCardsData();
 
@@ -100,13 +94,47 @@ export async function renderCards(containerSelector) {
     return;
   }
 
-  // Генерировать и добавлять карточки
+  // Генерировать карточки
+  const cardElements = [];
   cardsData.forEach((cardData) => {
     const cardElement = createCardElement(cardData);
+    cardElements.push(cardElement);
     container.appendChild(cardElement);
   });
 
-  // addFinishedClass для анимации карточек
+  // Добавить Intersection Observer ТОЛЬКО для мобильных устройств
+  if (isMobile) {
+    const observerOptions = {
+      root: null, // Вьюпорт
+      rootMargin: "0px",
+      threshold: 0.8, // 80% в зоне видимости
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const cardItem = entry.target;
+        const cardImage = cardItem.querySelector(".card__img");
+
+        if (entry.isIntersecting) {
+          // Добавить класс активности и изменить фон в зоне видимости
+          cardItem.classList.add("active");
+          cardImage.style.backgroundImage = `url("${cardItem.dataset.hoverImage}")`;
+        } else {
+          // Убрать класс активности и вернуть фон вне зоны видимости
+          cardItem.classList.remove("active");
+          cardImage.style.backgroundImage = `url("${cardItem.dataset.defaultImage}")`;
+        }
+      });
+    }, observerOptions);
+
+    // Добавить каждую карточку в observer
+    cardElements.forEach((cardElement) => {
+      const cardItem = cardElement.querySelector(".card-item");
+      observer.observe(cardItem);
+    });
+  }
+
+  // Анимации при загрузке
   addFinishedClass(".card-item", 100);
   addFinishedClass(".center", 0);
 }
