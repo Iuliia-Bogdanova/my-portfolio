@@ -148,5 +148,15 @@
         "description": "Tic-Tac-Toe game where players enter their names, and the game ends with a winner or a draw, with an option to play again",
         "name": "Tic-Tac-Toe",
         "category": "html / css / mjs / adaptive"
+    },
+    {
+        "link": "https://tursite-factory.netlify.app/",
+        "image": {
+            "default": "./assets/toursites_1.webp",
+            "hover": "./assets/toursites.webp"
+        },
+        "description": "Corporate Website Landing Page Demo",
+        "name": "Website Factory",
+        "category": "html / css / js / swiperjs / animations / forms / figma / responsive"
     }
 ]
