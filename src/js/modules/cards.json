@@ -1,142 +1,152 @@
 [
-  {
-    "link": "https://iuliia-bogdanova.github.io/About-Me/",
-    "image": {
-      "default": "./assets/about-me_1.webp",
-      "hover": "./assets/about-me.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/About-Me/",
+        "image": {
+            "default": "./assets/about-me_1.webp",
+            "hover": "./assets/about-me.webp"
+        },
+        "description": "My CV based on the template from RDCLR.SCHOOL",
+        "name": "My CV",
+        "category": "html / css / figma / adaptive"
     },
-    "description": "My CV based on the template from RDCLR.SCHOOL",
-    "name": "My CV",
-    "category": "html / css / figma / adaptive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/Sasha_double-slider/",
-    "image": {
-      "default": "./assets/models_1.webp",
-      "hover": "./assets/models.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/Sasha_double-slider/",
+        "image": {
+            "default": "./assets/models_1.webp",
+            "hover": "./assets/models.webp"
+        },
+        "description": "Double slider on the homepage of a portfolio website for a modeling agency",
+        "name": "WS Models",
+        "category": "html / css / swiperjs / adaptive"
     },
-    "description": "Double slider on the homepage of a portfolio website for a modeling agency",
-    "name": "WS Models",
-    "category": "html / css / swiperjs / adaptive"
-  },
-  {
-    "link": "https://b12.veganrussian.ru/",
-    "image": {
-      "default": "./assets/b12_1.webp",
-      "hover": "./assets/b12.webp"
+    {
+        "link": "https://b12.veganrussian.ru/",
+        "image": {
+            "default": "./assets/b12_1.webp",
+            "hover": "./assets/b12.webp"
+        },
+        "description": "Two-page website of a charity project",
+        "name": "B12",
+        "category": "pug / scss / js / figma / responsive"
     },
-    "description": "Two-page website of a charity project",
-    "name": "B12",
-    "category": "pug / scss / js / figma / responsive"
-  },
-  {
-    "link": "https://cats-hostel.netlify.app/",
-    "image": {
-      "default": "./assets/cats_1.webp",
-      "hover": "./assets/cats.webp"
+    {
+        "link": "https://cats-hostel.netlify.app/",
+        "image": {
+            "default": "./assets/cats_1.webp",
+            "hover": "./assets/cats.webp"
+        },
+        "description": "Landing page for a cat hostel",
+        "name": "Happy Cats",
+        "category": "reactjs / jsx / scss / slider / vite / adaptive"
     },
-    "description": "Landing page for a cat hostel",
-    "name": "Happy Cats",
-    "category": "reactjs / jsx / scss / slider / vite / adaptive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/Tormentum/",
-    "image": {
-      "default": "./assets/tormentum_1.webp",
-      "hover": "./assets/tormentum.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/Tormentum/",
+        "image": {
+            "default": "./assets/tormentum_1.webp",
+            "hover": "./assets/tormentum.webp"
+        },
+        "description": "Website showcasing the conceptual foundation of a fantastic universe, featuring locations and characters for use in the storyline of an online game",
+        "name": "Tormentum",
+        "category": "html / scss / js / modules / swiperjs / gulp / desktop"
     },
-    "description": "Website showcasing the conceptual foundation of a fantastic universe, featuring locations and characters for use in the storyline of an online game",
-    "name": "Tormentum",
-    "category": "html / scss / js / modules / swiperjs / gulp / desktop"
-  },
-  {
-    "link": "https://iuliia-todo-react.netlify.app/",
-    "image": {
-      "default": "./assets/todo_1.webp",
-      "hover": "./assets/todo.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/raccoons_shop/",
+        "image": {
+            "default": "./assets/raccoons_1.webp",
+            "hover": "./assets/raccoons.webp"
+        },
+        "description": "Promotional website for a bead jewelry artisan",
+        "name": "Raccoon's Shop",
+        "category": "html / css / js / jquery / responsive"
     },
-    "description": "Todo List application in ReactJS for task management, allowing you to add tasks, delete them, & change their status",
-    "name": "My ToDo List",
-    "category": "reactjs / jsx / css / localstorage / responsive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/Weather_OpenWeather/",
-    "image": {
-      "default": "./assets/weather_1.webp",
-      "hover": "./assets/weather.webp"
+    {
+        "link": "https://iuliia-todo-react.netlify.app/",
+        "image": {
+            "default": "./assets/todo_1.webp",
+            "hover": "./assets/todo.webp"
+        },
+        "description": "Todo List application in ReactJS for task management, allowing you to add tasks, delete them, & change their status",
+        "name": "My ToDo List",
+        "category": "reactjs / jsx / css / localstorage / responsive"
     },
-    "description": "Weather forecast application using the API from OpenWeather",
-    "name": "Weather in Your City",
-    "category": "html / css / js / api / adaptive"
-  },
-  {
-    "link": "https://new-year-gifts.netlify.app/",
-    "image": {
-      "default": "./assets/gifts_1.webp",
-      "hover": "./assets/gifts.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/Weather_OpenWeather/",
+        "image": {
+            "default": "./assets/weather_1.webp",
+            "hover": "./assets/weather.webp"
+        },
+        "description": "Weather forecast application using the API from OpenWeather",
+        "name": "Weather in Your City",
+        "category": "html / css / js / api / adaptive"
     },
-    "description": "Two-page online store website",
-    "name": "New Year Gifts",
-    "category": "html / scss / js / figma / responsive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/raccoons_shop/",
-    "image": {
-      "default": "./assets/raccoons_1.webp",
-      "hover": "./assets/raccoons.webp"
+    {
+        "link": "https://new-year-gifts.netlify.app/",
+        "image": {
+            "default": "./assets/gifts_1.webp",
+            "hover": "./assets/gifts.webp"
+        },
+        "description": "Two-page online store website",
+        "name": "New Year Gifts",
+        "category": "html / scss / js / figma / responsive"
     },
-    "description": "Promotional website for a bead jewelry artisan",
-    "name": "Raccoon's Shop",
-    "category": "html / css / js / jquery / responsive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/Mailfit-test/",
-    "image": {
-      "default": "./assets/email_1.webp",
-      "hover": "./assets/email.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/Mailfit-test/",
+        "image": {
+            "default": "./assets/email_1.webp",
+            "hover": "./assets/email.webp"
+        },
+        "description": "Discount offer email with a promo code from an online store",
+        "name": "Exclusive Offer Email",
+        "category": "html / css / table layout / email / figma / adaptive"
     },
-    "description": "Discount offer email with a promo code from an online store",
-    "name": "Exclusive Offer Email",
-    "category": "html / css / table layout / email / figma / adaptive"
-  },
-  {
-    "link": "https://www.veganhoreca.ru/",
-    "image": {
-      "default": "./assets/horeca_1.webp",
-      "hover": "./assets/horeca.webp"
+    {
+        "link": "https://www.veganhoreca.ru/",
+        "image": {
+            "default": "./assets/horeca_1.webp",
+            "hover": "./assets/horeca.webp"
+        },
+        "description": "Reference website on plant-based nutrition",
+        "name": "Vegan HoReCa",
+        "category": "nuxt / vue / scss / ts / figma / adaptive"
     },
-    "description": "Reference website on plant-based nutrition",
-    "name": "Vegan HoReCa",
-    "category": "nuxt / vue / scss / ts / figma / adaptive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/My-Pomodoro-Timer/",
-    "image": {
-      "default": "./assets/timer_1.webp",
-      "hover": "./assets/timer.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/My-Pomodoro-Timer/",
+        "image": {
+            "default": "./assets/timer_1.webp",
+            "hover": "./assets/timer.webp"
+        },
+        "description": "Pomodoro timer alternates between work and break periods, tracking completed rounds and displaying a message after each",
+        "name": "Pomodoro Timer",
+        "category": "html / css / js / localstorage / adaptive"
     },
-    "description": "Pomodoro timer alternates between work and break periods, tracking completed rounds and displaying a message after each",
-    "name": "Pomodoro Timer",
-    "category": "html / css / js / localstorage / adaptive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/book-club-posts/",
-    "image": {
-      "default": "./assets/club_1.webp",
-      "hover": "./assets/club.webp"
+    {
+        "link": "https://new-baiconur-tours.netlify.app/",
+        "image": {
+            "default": "./assets/alextour_1.webp",
+            "hover": "./assets/alextour.webp"
+        },
+        "description": "Frontend development of a multi-page travel agency website for WordPress integration",
+        "name": "New Baiconur Tours",
+        "category": "html / css / js / animations / forms / sliders / adaptive"
     },
-    "description": "Search page for finding posts by keywords on a Reading Club website",
-    "name": "Book Club Posts",
-    "category": "html / scss / js / json / api / adaptive"
-  },
-  {
-    "link": "https://iuliia-bogdanova.github.io/tic-tac-toe/",
-    "image": {
-      "default": "./assets/tictac_1.webp",
-      "hover": "./assets/tictac.webp"
+    {
+        "link": "https://iuliia-bogdanova.github.io/book-club-posts/",
+        "image": {
+            "default": "./assets/club_1.webp",
+            "hover": "./assets/club.webp"
+        },
+        "description": "Search page for finding posts by keywords on a Reading Club website",
+        "name": "Book Club Posts",
+        "category": "html / scss / js / json / api / adaptive"
     },
-    "description": "Tic-Tac-Toe game where players enter their names, and the game ends with a winner or a draw, with an option to play again",
-    "name": "Tic-Tac-Toe",
-    "category": "html / css / mjs / adaptive"
-  }
+    {
+        "link": "https://iuliia-bogdanova.github.io/tic-tac-toe/",
+        "image": {
+            "default": "./assets/tictac_1.webp",
+            "hover": "./assets/tictac.webp"
+        },
+        "description": "Tic-Tac-Toe game where players enter their names, and the game ends with a winner or a draw, with an option to play again",
+        "name": "Tic-Tac-Toe",
+        "category": "html / css / mjs / adaptive"
+    }
 ]
