@@ -1,295 +1,348 @@
+@use "./modules/fonts";
 @use "./modules/vars";
 
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html,
 body {
-  background-color: transparent; /* задается скриптом */
-  color: transparent;
+    background-color: transparent; /* задается скриптом */
+    color: transparent;
 }
 
 body {
-  min-width: 320px;
-  min-height: 100vh;
-  margin: 0;
-  font-family: "Space Mono", serif;
-  font-weight: 400;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  transition: all 0.3s ease;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Space Mono", serif;
+    font-weight: 400;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
-  background: inherit;
-  width: 10px;
+    background: inherit;
+    width: 10px;
 }
 
 body::-webkit-scrollbar-thumb {
-  border-radius: 8px;
-  border: 1px solid var(--text-color);
+    border-radius: 8px;
+    border: 1px solid var(--text-color);
 
-  &:hover {
-    border: 1px solid var(--hover-color);
-    background-color: var(--hover-color);
-  }
+    &:hover {
+        border: 1px solid var(--hover-color);
+        background-color: var(--hover-color);
+    }
 }
 
 .container {
-  position: relative;
-  width: 100%;
-  max-width: 1540px;
-  min-height: 100%;
-  padding: 50px;
-  margin: 0 auto;
+    position: relative;
+    width: 100%;
+    max-width: 1540px;
+    min-height: 100%;
+    padding: 50px;
+    margin: 0 auto;
 }
 
 a {
-  text-decoration: none;
-  color: var(--text-color);
-  transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
 }
 
 button {
-  border: none;
-  background-color: inherit;
+    border: none;
+    background-color: inherit;
 }
 
 p {
-  margin: 0;
-  line-height: 1.4;
+    margin: 0;
+    line-height: 1.4;
 }
 
 h1,
 h2 {
-  font-weight: 400;
-  line-height: 1.1;
-  letter-spacing: 4px;
-  margin: 0 0 30px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 4px;
+    margin: 0 0 30px;
 }
 
 #typewriter {
-  overflow: hidden;
-  border-right: 2px solid var(--hover-color);
-  white-space: nowrap;
-  animation: typing 2s steps(18, end), blink 0.5s steps(18, end) 4s infinite;
+    overflow: hidden;
+    border-right: 2px solid var(--hover-color);
+    white-space: nowrap;
+    animation: typing 2s steps(18, end), blink 0.5s steps(18, end) 4s infinite;
 }
 
 #typewriter.finished {
-  overflow: visible;
-  border-right: none;
+    overflow: visible;
+    border-right: none;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 20ch;
-  }
+    from {
+        width: 0;
+    }
+    to {
+        width: 20ch;
+    }
 }
 
 @keyframes blink {
-  from {
-    border-right-color: var(--hover-color);
-  }
-  to {
-    border-right-color: transparent;
-  }
+    from {
+        border-right-color: var(--hover-color);
+    }
+    to {
+        border-right-color: transparent;
+    }
 }
 
 .header__title {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
 
 .back-arrow {
-  display: block;
-  width: 30px;
-  height: 100%;
-  margin: 0 0 24px;
+    display: block;
+    width: 30px;
+    height: 100%;
+    margin: 0 0 24px;
 
-  & svg {
-    fill: var(--icon-color);
-  }
+    & svg {
+        fill: var(--icon-color);
+    }
 
-  &:hover svg {
-    fill: var(--hover-color);
-    transition: fill 0.3s ease;
-  }
+    &:hover svg {
+        fill: var(--hover-color);
+        transition: fill 0.3s ease;
+    }
 }
 
 button.sun-moon {
-  position: absolute;
-  top: 50px;
-  right: 50px;
-  width: 50px;
-  height: 40px;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 50px;
+    height: 40px;
 
-  opacity: 0;
-  visibility: hidden;
+    opacity: 0;
+    visibility: hidden;
 
-  &.visible {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease;
-  }
+    &.visible {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
 
-  &.hidden {
-    display: none;
-  }
+    &.hidden {
+        display: none;
+    }
 
-  & svg {
-    stroke: var(--icon-color);
-    transition: stroke 0.3s ease;
-  }
+    & svg {
+        stroke: var(--icon-color);
+        transition: stroke 0.3s ease;
+    }
 }
 
 .main,
 .footer {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(150px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(150px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .main.finished,
 .footer.finished {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .grid-content {
-  display: grid;
-  grid-template-columns: 100px auto;
-  grid-template-rows: repeat(5, auto);
-  column-gap: 6px;
-  row-gap: 16px;
-  padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: repeat(5, auto);
+    column-gap: 6px;
+    row-gap: 16px;
+    padding-bottom: 30px;
 }
 
 .forward-arrow {
-  display: inline-block;
-  width: 30px;
-  height: 28px;
-  margin-left: 10px;
-  vertical-align: top;
-  rotate: 180deg;
+    display: inline-block;
+    width: 30px;
+    height: 28px;
+    margin-left: 10px;
+    vertical-align: top;
+    rotate: 180deg;
 }
 
 .cards {
-  columns: 300px;
-  column-gap: var(--gap);
-  margin: 50px 0;
+    columns: 300px;
+    column-gap: var(--gap);
+    margin: 50px 0;
 }
 
 .card-item {
-  position: relative;
-  width: 300px;
-  height: auto;
-  margin: 0 auto var(--gap);
-  break-inside: avoid;
-  border-radius: 20px;
-  border: 2px solid var(--text-color);
-  opacity: 0;
-  visibility: hidden;
-  transform: translate(-50%, -50%);
-  transition: all 0.4s ease;
-
-  &.finished {
-    opacity: 1;
-    visibility: visible;
-    transform: translate(0, 0);
-  }
-
-  &:hover {
-    border: 3px solid var(--hover-color);
-    transform: scaleY(1.1);
-
-    h3 {
-      color: var(--hover-color);
-    }
-  }
-
-  &.active {
-    border: 3px solid var(--hover-color);
-    transition: all 0.4s ease;
-
-    h3 {
-      color: var(--hover-color);
-      transition: all 0.4s ease;
-    }
-  }
-}
-
-.card__img {
-  width: 100%;
-  height: 350px;
-  border-radius: 19px 19px 0 0;
-  background-repeat: no-repeat;
-  background-size: cover;
-  transition: all 0.3s ease;
-}
-
-.card__text {
-  padding: 20px;
-  color: var(--text-color);
-}
-
-.footer__text {
-  font-size: 14px;
-
-  &.center {
-    text-align: center;
-    padding-top: 20px;
+    position: relative;
+    width: 300px;
+    height: auto;
+    margin: 0 auto var(--gap);
+    break-inside: avoid;
+    border-radius: 20px;
+    border: 2px solid var(--text-color);
     opacity: 0;
     visibility: hidden;
+    transform: translate(-50%, -50%);
     transition: all 0.4s ease;
 
     &.finished {
-      opacity: 1;
-      visibility: visible;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
     }
-  }
+
+    &:hover {
+        border: 3px solid var(--hover-color);
+        transform: scaleY(1.1);
+
+        h3 {
+            color: var(--hover-color);
+        }
+    }
+
+    &.active {
+        border: 3px solid var(--hover-color);
+        transition: all 0.4s ease;
+
+        h3 {
+            color: var(--hover-color);
+            transition: all 0.4s ease;
+        }
+    }
+}
+
+.card__img {
+    width: 100%;
+    height: 350px;
+    border-radius: 19px 19px 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 0.3s ease;
+}
+
+.card__text {
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.footer__text {
+    font-size: 14px;
+
+    &.center {
+        text-align: center;
+        padding-top: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease;
+
+        &.finished {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
 }
 
 span.copy {
-  font-size: 24px;
-  vertical-align: -9px;
+    font-size: 24px;
+    vertical-align: -9px;
 }
 
 button.arrow-up {
-  position: fixed;
-  width: 50px;
-  height: 40px;
-  bottom: 40px;
-  right: 8px;
-  color: var(--icon-color);
-  z-index: 10;
-  opacity: 0;
-  visibility: hidden;
+    position: fixed;
+    width: 50px;
+    height: 40px;
+    bottom: 40px;
+    right: 8px;
+    color: var(--icon-color);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
 
-  &.visible {
-    display: block;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.3s ease;
-  }
+    &.visible {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+        transition: all 0.3s ease;
+    }
 
-  &.hidden {
-    display: none;
-  }
+    &.hidden {
+        display: none;
+    }
 
-  svg {
-    stroke: var(--icon-color);
-  }
+    svg {
+        stroke: var(--icon-color);
+    }
+}
+
+.grid-error {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "error-modal error-img";
+    // height: 100vh;
+    // max-height: 100vh;
+    // height: auto;
+    // height: 80%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding: 100px 0;
+    gap: 30px;
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "error-modal"
+            "error-img";
+    }
+}
+
+.error-modal {
+    grid-area: error-modal;
+    animation: slideInLeft 0.8s ease;
+}
+
+.error-img {
+    position: relative;
+    grid-area: error-img;
+    background-image: url("../assets/cat-404.webp");
+    width: 100%;
+    height: 100%;
+    max-width: 670px;
+    // max-height: 670px;
+    border-radius: 19px;
+    border: 2px solid var(--text-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.3s ease;
+    animation: slideInRight 0.8s ease;
+
+    @media (max-width: 700px) {
+        animation: slideInBottom 0.8s ease;
+    }
+}
+
+[data-theme="light"] .error-img {
+    filter: invert(1);
 }
 
 @import "./modules/media";
