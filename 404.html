@@ -28,8 +28,25 @@
         </script>
     </head>
     <body id="page-404">
-        <div class="container">
-            <header>
+        <div class="container container-404">
+            <header class="header-404">
+                <a
+                    href="./index.html"
+                    class="back-arrow back-arrow-404"
+                    hidden
+                    aria-label="Switch theme"
+                >
+                    <svg
+                        fill="currentColor"
+                        viewBox="0 0 386.242 386.242"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="width: 30px; height: 30px"
+                    >
+                        <path
+                            d="M374.212,182.3H39.432l100.152-99.767c4.704-4.704,4.704-12.319,0-17.011 c-4.704-4.704-12.319-4.704-17.011,0L3.474,184.61c-4.632,4.632-4.632,12.379,0,17.011l119.1,119.1 c4.704,4.704,12.319,4.704,17.011,0c4.704-4.704,4.704-12.319,0-17.011L39.432,206.36h334.779c6.641,0,12.03-5.39,12.03-12.03 S380.852,182.3,374.212,182.3z"
+                        />
+                    </svg>
+                </a>
                 <button class="sun-moon" hidden>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -55,17 +72,28 @@
             </header>
             <main>
                 <div class="grid-error">
-                    <div class="error-modal"></div>
+                    <div class="error-text">
+                        <p class="subtitle-404">Oops! Page Not Found</p>
+                        <h1 class="title-404">404</h1>
+                        <p class="text-404">
+                            We couldn’t find the page you were looking for.<br />It
+                            might have been removed or renamed.
+                        </p>
+                        <p class="subtitle-404">
+                            See <a href="./projects.html">Projects</a> |
+                            <a href="./index.html">Home</a>
+                        </p>
+                    </div>
                     <div class="error-img"></div>
                 </div>
             </main>
-            <!-- <footer>
-                <p class="footer__text center">
+            <footer>
+                <p class="footer__text footer__text-404">
                     2023-2025 <span class="copy">©</span> Izhevsk, Udmurtia
                 </p>
-            </footer> -->
+            </footer>
         </div>
 
-        <script type="module" src="/src/js/main.js"></script>
+        <script type="module" src="./src/js/main.js"></script>
     </body>
 </html>
