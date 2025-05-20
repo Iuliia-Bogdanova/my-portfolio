@@ -40,6 +40,16 @@
         "category": "reactjs / jsx / scss / slider / vite / adaptive"
     },
     {
+        "link": "https://web-developer-projects.netlify.app/404",
+        "image": {
+            "default": "./assets/okak_1.webp",
+            "hover": "./assets/okak.webp"
+        },
+        "description": "Fallback 404 page featuring custom design",
+        "name": "404 Error Page",
+        "category": "html / scss / js / animations / responsive"
+    },
+    {
         "link": "https://iuliia-bogdanova.github.io/Tormentum/",
         "image": {
             "default": "./assets/tormentum_1.webp",

@@ -22,6 +22,9 @@
 }
 
 @media (max-width: 1024px) {
+    .container-404 {
+        gap: 30px;
+    }
     .grid-error {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
@@ -32,6 +35,10 @@
 
     .error-text {
         text-align: center;
+    }
+
+    .error-img {
+        animation: slideInTop 1s ease forwards;
     }
 }
 
