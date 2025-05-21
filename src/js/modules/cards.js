@@ -5,7 +5,7 @@
  * - Ensure the page is reloaded after changing viewport size for proper behavior.
  */
 
-import { addFinishedClass } from "./utils";
+// import { addFinishedClass } from "./utils";
 import { isMobileDevice } from "./utils";
 
 const isMobile = isMobileDevice();
@@ -33,10 +33,23 @@ export function createCardElement(cardData) {
     const cardItem = document.createElement("div");
     cardItem.classList.add("card-item");
 
-    // Создать фон
-    const cardImage = document.createElement("div");
-    cardImage.classList.add("card__img");
-    cardImage.style.backgroundImage = `url("${cardData.image.default}")`;
+    // Обертка для изображений
+    const cardImageWrapper = document.createElement("div");
+    cardImageWrapper.classList.add("card__img-wrapper");
+
+    // Изображение по умолчанию
+    const defaultImg = document.createElement("div");
+    defaultImg.classList.add("card__img", "default");
+    defaultImg.style.backgroundImage = `url("${cardData.image.default}")`;
+
+    // Ховер-изображение
+    const hoverImg = document.createElement("div");
+    hoverImg.classList.add("card__img", "hover");
+    hoverImg.style.backgroundImage = `url("${cardData.image.hover}")`;
+
+    // Вложить в обертку
+    cardImageWrapper.appendChild(defaultImg);
+    cardImageWrapper.appendChild(hoverImg);
 
     // Создать текст
     const cardText = document.createElement("div");
@@ -59,19 +72,8 @@ export function createCardElement(cardData) {
     cardText.appendChild(category);
 
     // Собрать карточку
-    cardItem.appendChild(cardImage);
+    cardItem.appendChild(cardImageWrapper);
     cardItem.appendChild(cardText);
-
-    // Обработчики ховера для десктопа
-    if (!isMobile) {
-        cardItem.addEventListener("mouseenter", () => {
-            cardImage.style.backgroundImage = `url("${cardData.image.hover}")`;
-        });
-
-        cardItem.addEventListener("mouseleave", () => {
-            cardImage.style.backgroundImage = `url("${cardData.image.default}")`;
-        });
-    }
 
     // Добавить data-атрибуты для Intersection Observer
     cardItem.dataset.hoverImage = cardData.image.hover;
@@ -107,24 +109,25 @@ export async function renderCards(containerSelector) {
     // Добавить Intersection Observer ТОЛЬКО для мобильных устройств
     if (isMobile) {
         const observerOptions = {
-            root: null, // Вьюпорт
+            root: null,
             rootMargin: "0px",
-            threshold: 0.5, // 50% в зоне видимости
+            threshold: 0.85, // 85% в зоне видимости
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 const cardItem = entry.target;
-                const cardImage = cardItem.querySelector(".card__img");
+                const defaultImg = cardItem.querySelector(".card__img.default");
+                const hoverImg = cardItem.querySelector(".card__img.hover");
 
                 if (entry.isIntersecting) {
-                    // Добавить класс активности и изменить фон в зоне видимости
                     cardItem.classList.add("active");
-                    cardImage.style.backgroundImage = `url("${cardItem.dataset.hoverImage}")`;
+                    hoverImg.style.opacity = "1";
+                    defaultImg.style.opacity = "0";
                 } else {
-                    // Убрать класс активности и вернуть фон вне зоны видимости
                     cardItem.classList.remove("active");
-                    cardImage.style.backgroundImage = `url("${cardItem.dataset.defaultImage}")`;
+                    hoverImg.style.opacity = "0";
+                    defaultImg.style.opacity = "1";
                 }
             });
         }, observerOptions);
@@ -135,8 +138,4 @@ export async function renderCards(containerSelector) {
             observer.observe(cardItem);
         });
     }
-
-    // Анимации при загрузке
-    addFinishedClass(".card-item", 100);
-    addFinishedClass(".center", 0);
 }

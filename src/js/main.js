@@ -6,7 +6,8 @@ import { initTitleAnimation } from "./modules/title-animation";
 import { initArrowUp } from "./modules/arrow-up";
 import { initBackArrow } from "./modules/back-arrow";
 
-import { isCurrentPage, toggleScrollForPage } from "./modules/utils";
+import { isCurrentPage } from "./modules/utils";
+// import { isCurrentPage, toggleScrollForPage } from "./modules/utils";
 
 import { renderCards } from "./modules/cards";
 
@@ -16,6 +17,6 @@ initArrowUp();
 initBackArrow();
 
 if (isCurrentPage("projects-page")) {
-    toggleScrollForPage("projects-page");
+    // toggleScrollForPage("projects-page");
     renderCards(".cards");
 }
