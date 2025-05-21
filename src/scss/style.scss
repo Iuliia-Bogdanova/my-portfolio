@@ -191,6 +191,7 @@ button.sun-moon {
 }
 
 .cards {
+    min-height: 80vh;
     columns: 300px;
     column-gap: var(--gap);
     margin: 50px 0;
@@ -199,11 +200,17 @@ button.sun-moon {
 .card-item {
     position: relative;
     width: 300px;
-    height: auto;
+    min-height: 450px;
     margin: 0 auto var(--gap);
     break-inside: avoid;
     border-radius: 20px;
     border: 2px solid var(--text-color);
+    opacity: 0;
+    transition: opacity 3s ease;
+
+    &.loaded {
+        opacity: 1;
+    }
 
     &.active {
         border: 3px solid var(--hover-color);
@@ -233,7 +240,7 @@ button.sun-moon {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
 }
 
 .card__img.default {
@@ -265,14 +272,6 @@ button.sun-moon {
     &.center {
         text-align: center;
         padding-top: 20px;
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.4s ease;
-
-        &.finished {
-            opacity: 1;
-            visibility: visible;
-        }
     }
 }
 

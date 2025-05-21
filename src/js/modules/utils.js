@@ -6,7 +6,7 @@ export function isMobileDevice() {
     return window.matchMedia("(max-width: 768px)").matches;
 }
 
-// Запретить прокрутку главной страницы
+// Запретить прокрутку страницы
 // export function toggleScrollForPage(pageId) {
 //     if (isCurrentPage(pageId)) {
 //         document.body.style.overflowY = "auto";

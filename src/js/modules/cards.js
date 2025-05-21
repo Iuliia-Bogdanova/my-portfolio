@@ -1,11 +1,3 @@
-/**
- * NOTE: This script relies on the viewport size determined at page load.
- * For development and testing:
- * - Clear browser cache or enable "Disable cache" in DevTools when switching viewports.
- * - Ensure the page is reloaded after changing viewport size for proper behavior.
- */
-
-// import { addFinishedClass } from "./utils";
 import { isMobileDevice } from "./utils";
 
 const isMobile = isMobileDevice();
@@ -23,35 +15,36 @@ export async function loadCardsData() {
 }
 
 export function createCardElement(cardData) {
-    // Создать обертку-ссылку
     const linkElement = document.createElement("a");
     linkElement.href = cardData.link;
     linkElement.target = "_blank";
     linkElement.classList.add("card-link");
 
-    // Создать карточку
     const cardItem = document.createElement("div");
     cardItem.classList.add("card-item");
 
-    // Обертка для изображений
     const cardImageWrapper = document.createElement("div");
     cardImageWrapper.classList.add("card__img-wrapper");
 
-    // Изображение по умолчанию
     const defaultImg = document.createElement("div");
     defaultImg.classList.add("card__img", "default");
     defaultImg.style.backgroundImage = `url("${cardData.image.default}")`;
 
-    // Ховер-изображение
     const hoverImg = document.createElement("div");
     hoverImg.classList.add("card__img", "hover");
     hoverImg.style.backgroundImage = `url("${cardData.image.hover}")`;
 
-    // Вложить в обертку
+    // Поместить ссылки в dataset родителя
+    cardItem.dataset.defaultImgEl = "default";
+    cardItem.dataset.hoverImgEl = "hover";
+
+    // Добавить data-role для прямого поиска
+    defaultImg.dataset.role = "default";
+    hoverImg.dataset.role = "hover";
+
     cardImageWrapper.appendChild(defaultImg);
     cardImageWrapper.appendChild(hoverImg);
 
-    // Создать текст
     const cardText = document.createElement("div");
     cardText.classList.add("card__text");
 
@@ -66,30 +59,19 @@ export function createCardElement(cardData) {
     category.classList.add("topics");
     category.textContent = cardData.category;
 
-    // Собрать текст
     cardText.appendChild(description);
     cardText.appendChild(name);
     cardText.appendChild(category);
 
-    // Собрать карточку
     cardItem.appendChild(cardImageWrapper);
     cardItem.appendChild(cardText);
-
-    // Добавить data-атрибуты для Intersection Observer
-    cardItem.dataset.hoverImage = cardData.image.hover;
-    cardItem.dataset.defaultImage = cardData.image.default;
-
-    // Вставить карточку в ссылку
     linkElement.appendChild(cardItem);
 
     return linkElement;
 }
 
-// Рендер карточек
 export async function renderCards(containerSelector) {
     const cardsData = await loadCardsData();
-
-    // Получить контейнер для карточек
     const container = document.querySelector(containerSelector);
     if (!container) {
         console.error(
@@ -98,41 +80,55 @@ export async function renderCards(containerSelector) {
         return;
     }
 
-    // Генерировать карточки
+    const fragment = document.createDocumentFragment();
     const cardElements = [];
+
     cardsData.forEach((cardData) => {
         const cardElement = createCardElement(cardData);
+        const cardItem = cardElement.querySelector(".card-item");
+
+        // Добавить loaded после рендера кадра
+        requestAnimationFrame(() => {
+            cardItem.classList.add("loaded");
+        });
+
         cardElements.push(cardElement);
-        container.appendChild(cardElement);
+        fragment.appendChild(cardElement);
     });
 
-    // Добавить Intersection Observer ТОЛЬКО для мобильных устройств
+    container.appendChild(fragment);
+
+    // IntersectionObserver — для мобилки
     if (isMobile) {
-        const observerOptions = {
-            root: null,
-            rootMargin: "0px",
-            threshold: 0.85, // 85% в зоне видимости
-        };
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const cardItem = entry.target;
+                    const defaultImg = cardItem.querySelector(
+                        '[data-role="default"]'
+                    );
+                    const hoverImg = cardItem.querySelector(
+                        '[data-role="hover"]'
+                    );
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const cardItem = entry.target;
-                const defaultImg = cardItem.querySelector(".card__img.default");
-                const hoverImg = cardItem.querySelector(".card__img.hover");
+                    if (entry.isIntersecting) {
+                        cardItem.classList.add("active");
+                        hoverImg.style.opacity = "1";
+                        defaultImg.style.opacity = "0";
+                    } else {
+                        cardItem.classList.remove("active");
+                        hoverImg.style.opacity = "0";
+                        defaultImg.style.opacity = "1";
+                    }
+                });
+            },
+            {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.85,
+            }
+        );
 
-                if (entry.isIntersecting) {
-                    cardItem.classList.add("active");
-                    hoverImg.style.opacity = "1";
-                    defaultImg.style.opacity = "0";
-                } else {
-                    cardItem.classList.remove("active");
-                    hoverImg.style.opacity = "0";
-                    defaultImg.style.opacity = "1";
-                }
-            });
-        }, observerOptions);
-
-        // Добавить каждую карточку в observer
         cardElements.forEach((cardElement) => {
             const cardItem = cardElement.querySelector(".card-item");
             observer.observe(cardItem);
