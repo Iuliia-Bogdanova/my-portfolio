@@ -125,7 +125,7 @@ export async function renderCards(containerSelector) {
             {
                 root: null,
                 rootMargin: "0px",
-                threshold: 0.85,
+                threshold: 0.8,
             }
         );
 
